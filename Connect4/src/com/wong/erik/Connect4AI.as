@@ -66,6 +66,7 @@ package com.wong.erik
 					curMove.x = (winningMove.winner==1?-100:100);
 				}
 				
+				
 				// If we've got a win for either side, or we've reached the max depth, set next move's score
 				// if not, do the recursive call
 				if (curMove.x==-100||Depth==MaxDepth||curMove.x ==100) {
