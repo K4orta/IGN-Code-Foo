@@ -1,0 +1,101 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lictek - High-Tech license Plates for Astral Hunters</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<header>
+	<img src="img/licetek_logo.png" id="licetekLogo">
+	<h3>High-tech license plates for astral warriors and state or local governments</h3>
+</header>
+
+  <div role="main" id="mainContainer">
+	
+	
+	
+	<div id="solveResult">
+		<div id="resultContain" class="blackBox" style="display:none">
+			<div id="solveValues">
+				<ul>
+					<li>Your pattern <span class="returnValue" id="platePattern">XXX</span></li>
+					<li>Total possible plates <span class="returnValue" id="plateTotal">00</span></li>
+					<li>Excess plates <span class="returnValue" id="plateExcess">00</span></li>
+				</ul>
+			</div>
+			<div id="samplePlateHolder">
+				<div id="samplePlate" class="libertyPlate">
+					FSFA4500
+				</div>
+			</div><!--samplePlateHolder-->
+			<div id="altPlateSelector">
+				<h3>Custom Backgrounds</h3>
+				<ul>
+					<li><a href="img/liberty_plate.png" pc="libertyPlate">Default</a></li>
+					<li><a href="img/wolf_plate.png" pc="wolfPlate">Wolves</a></li>
+					<li><a href="img/usmc_plate.png" pc="usmcPlate">Really Moto</a></li>
+					<li><a href="img/bird_plate.png" pc="birdPlate">Bird of Prey</a></li>
+					<li><a href="img/cartoon_plate.png" pc="cartoonPlate">Video Game</a></li>
+					<li><a href="img/pets_plate.png" pc="petsPlate">Pets</a></li>
+				</ul>
+			</div>
+		</div><!--resultContain-->
+	</div>
+	
+	<div id="populationBar">
+		<form id="popForm">
+			<input type="text" name="popInput" id="popInput">
+			<input type="submit" value="Go!">
+		</form>
+	</div>
+	
+	<div id="chubbsIntro" class="blackBox">
+		<p>
+			Welcome fellow traveler. I am Chubbs Thunderhawk, owner of LICETEK Advanced License Plate Manufacturing Inc. Our space-aged pattern generation algorithm will create the simplest pattern of letters and numbers to produce enough license plates for any given population you enter.
+		</p>
+		<img src="img/chubbs.png">
+		<p>
+			I shed a single tear for every wasted license plate. Excess license plates waste valuable resources and waste your money! Our algorithm will always generate a pattern that will produce the fewest possible excess license plates. That's the Chubbs Thunderhawk promise!
+		</p>
+		
+	</div><!--chubbsIntro-->
+	
+	<div id="populationPicker" class="blackBox">
+	<p>
+		Can't decide on a population? Try one of these to get started:
+	</p>
+	<ul>
+		<li pop="1">Buford, WY: 1</li>
+		<li pop="13">Dellview, NC: 13</li>
+		<li pop="260">Samburg, TN: 260</li>
+		<li pop="380">Raisin City, CA: 380</li>
+		<li pop="7,468,390">San Francisco: 7M</li>
+		<li pop="13,709,000">London:13M</li>
+		<li pop="17,786,419">Los Angeles:17M</li>
+		<li pop="35,682,460">Tyoko: 35M</li>
+	</ul>
+	</div><!--populationPicker-->
+	
+  </div><!--mainContainer-->
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
