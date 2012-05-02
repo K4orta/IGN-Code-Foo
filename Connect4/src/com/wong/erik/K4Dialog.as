@@ -20,8 +20,6 @@ package com.wong.erik
 	
 		public var xy:FlxPoint = new FlxPoint(0,0);
 		
-		
-		
 		public function K4Dialog(ShowText:String, TextSpeed:Number=-1, X:Number=0, Y:Number=0) {
 			super();
 			
@@ -45,11 +43,12 @@ package com.wong.erik
 		
 		public function say(ShowText:String, TextSpeed:Number=-1):void {
 			finalText.kill();
+			
 			finalText = new FlxText((FlxG.width * .5) - (ShowText.length * 11 * .5), 0, 110, "");
 			finalText.setFormat(null, 8, 0x365821, "left", 0);
 			finalText.scrollFactor.x = finalText.scrollFactor.y = 0;
 			add(finalText);
-			targetText = ShowText;
+			targetText =ShowText;
 			finalText.x = xy.x;
 			finalText.y = xy.y;
 			if (TextSpeed > 0) {

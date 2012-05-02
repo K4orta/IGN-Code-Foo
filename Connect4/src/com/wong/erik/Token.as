@@ -12,6 +12,7 @@ package com.wong.erik
 		public var lifeTime:uint;
 		public var gridX:uint;
 		public var gridY:uint;
+		public var exploding:Boolean=false;
 		public function Token(X:Number=0, Y:Number=0, SimpleGraphic:Class=null) {
 			super(X, Y, SimpleGraphic);
 			loadGraphic(ImgToken, true, false, 32, 32);
@@ -30,7 +31,7 @@ package com.wong.erik
 			super.update();
 			
 			if (!immovable) {
-				if (lifeTime < 1 || (isTouching(DOWN) && FlxU.abs(velocity.y)<2)) {
+				if (!exploding && lifeTime < 1 || (isTouching(DOWN) && FlxU.abs(velocity.y)<2)) {
 					acceleration.y = 0;
 					immovable = true;
 					velocity.y = 0;

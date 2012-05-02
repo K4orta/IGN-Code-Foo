@@ -99,7 +99,7 @@ package{
 				moveCoolDown -= FlxG.elapsed;
 			}
 			
-			if (moveCoolDown<=0&&playersTurn&&FlxG.mouse.justPressed()) {
+			if (gameInProgress&&moveCoolDown<=0&&playersTurn&&FlxG.mouse.justPressed()) {
 				var moveX:int = int((FlxG.mouse.x) / 32) - 4;
 				if(moveX>=0&&moveX<7)
 					takeTurn(moveX, -32);
@@ -138,6 +138,7 @@ package{
 				}else if (!grid.anyOpenMoves()) {
 					endInDraw();
 				}
+				
 				playersTurn = !playersTurn;
 				moveCoolDown = playersTurn?secondsBetweenMoves*.2:secondsBetweenMoves;
 				
@@ -177,9 +178,8 @@ package{
 		public function endInVictory(Win:Object):void {
 			gameInProgress = false;
 			var winningToken:Token;
-				//winningToken = findTokenByLocation(win.x, win.y);
 				for (var i:int = 0; i < 4;++i ) {
-					winningToken = findTokenByLocation(Win.x + Win.dir.x * -i, Win.y + Win.dir.y * -i);
+					winningToken = findTokenByLocation(Win.x + Win.dir.x * i, Win.y + Win.dir.y * i);
 					if (winningToken) winningToken.play("Win");
 				}
 			if (Win.winner == 1) {
@@ -190,12 +190,7 @@ package{
 				compTalk.say("lol");
 			}
 			for (var a:String in tokens.members) {
-				wait(Math.random() * 3, tokens.members[a].explode);
-				tokens.members[a].immovable = false;
-				tokens.members[a].acceleration.y = 400;
-				tokens.members[a].elasticity = .3;
-				tokens.members[a].lifeTime = 8 * FlxG.framerate;
-				
+				wait(1+Math.random() * 2, tokens.members[a].explode);
 			}
 			wait(4,reset);
 		}
